@@ -15,16 +15,25 @@ def display():
     #Creating random number so the same song won't always be shown.
     num=random.randint(0,9)
     
-    #Pass data to index.html
+    #Pass data to index.html by choosing individual track.
     track = lst['tracks'][num]
+    
+    #Track name.
     name='track    : ' + track['name']
+    
+    #Artist's name
     artist_name = lst['tracks'][0]['album']['artists'][0]['name']
+    
+    #Check if song has preview url. Otherwise print something else.
     if track['preview_url'] is not None:
         url= 'audio    : ' + track['preview_url']
     else:
         url='There is no preview url for this specific song.'
+        
+    #Album cover
     album_cover='cover art: ' + track['album']['images'][0]['url']
-    print()
+    
+    #This is where the data gets passed.
     #return render_template(
      #   "index.html",
       #  artists=lst,
