@@ -13,12 +13,12 @@ def find_albums():
     
     #These are my artist id's. 
     jack_johnson_uri = 'spotify:artist:3GBPw9NK25X1Wt2OUvOwY3'
-    heilung_uri = 'spotify:artist:7sTKZr30LqC928DZ5P9mNQ'
-    ville_uri = 'spotify:artist:6Kvpu1Xs687rTFj4qlGg4h'
+    the_high_kings_uri = 'spotify:artist:6wXjctGBzxkT0ghwfQ8FC0'
+    nas_uri = 'spotify:artist:20qISvAhX20dpIbOOzGK3q'
     
     
     #This is setting up to randomly choose one of the artists.
-    artists = [jack_johnson_uri,heilung_uri,ville_uri]
+    artists = [jack_johnson_uri,the_high_kings_uri,nas_uri]
     num = random.randint(0,2)
     
     

@@ -8,9 +8,8 @@ import random
 
 app = Flask(__name__)
 app.debug=True
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
-@app.route('/',methods=['POST', 'GET'])
+@app.route('/')
 def display():
     #Fetching artist's data.
     lst = find_albums()
@@ -22,13 +21,12 @@ def display():
     track = lst['tracks'][num]
     
     #Track name.
-    name=track['name']
+    name='track    : ' + track['name']
+    
+    lyrics=fetchLyrics(name)
     
     #Artist's name
-    artist_name = lst['tracks'][0]['album']['artists'][-1]['name']
-
-    lyrics=fetchLyrics(artist_name,name)
-    
+    artist_name = lst['tracks'][0]['album']['artists'][0]['name']
     #Check if song has preview url. Otherwise print something else.
     if track['preview_url'] is not None:
         url=track['preview_url']
@@ -43,8 +41,7 @@ def display():
         artist=artist_name,
         track_name=name,
         cover=album_cover,
-        track_preview=url,
-        lyrics=lyrics
+        track_preview=url
     )
 
 

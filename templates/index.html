@@ -2,7 +2,7 @@
 <html lang=en>
     <head>
         <title>Favorite songs</title>
-        
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" />
     </head>
     <body>
         <div>
@@ -11,7 +11,16 @@
         </div>
         <div>
             <h2>{{ artist }}</h2><br>
-            <h3>{{ track_preview }}</h3>
+            <figure>
+                <figcaption>Listen to a preview of the song:</figcaption>
+                <audio controls src="{{ track_preview }}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
+            </figure>
+        </div>
+        <div>
+            <a href="{{ lyrics }}">{{ lyrics }}</a>
         </div>
     </body>
 </html>

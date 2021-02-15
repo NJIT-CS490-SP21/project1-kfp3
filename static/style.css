@@ -1,0 +1,10 @@
+.body{
+    background-color: pink;
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.div{
+    margin-left:auto;
+    margin-right:auto;
+}
