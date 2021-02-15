@@ -1,0 +1,5 @@
+Flask
+python-dotenv
+spotipy
+random
+spotipy.oauth2
