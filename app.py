@@ -8,7 +8,7 @@ import random
 app = Flask(__name__)
 app.debug=True
 
-@app.route('/')
+@app.route('/app')
 def display():
     #Fetching artist's data.
     lst = find_albums()
