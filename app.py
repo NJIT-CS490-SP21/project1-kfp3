@@ -39,8 +39,9 @@ def display():
     album_cover=track['album']['images'][0]['url']
     #This is where the data gets passed.
     
-    if artist is None:
-        artist = "There was an error fetching the artist's name"
+    #error check
+    if artist_name is None:
+        artist_name = "There was an error fetching the artist's name"
     if name is None:
         name = "There was an error fetching the song name"
     if album_cover is None:
